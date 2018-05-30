@@ -1,0 +1,307 @@
+.body {
+  font-family: 'Josefin Slab', serif;
+}
+.container {
+  display: grid;
+  font-family: 'Josefin Slab', serif;
+
+  grid-template-areas:
+    "header header header"
+    "nav content side"
+    "footer footer footer";
+
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-rows: auto 1fr auto;
+  grid-gap: 10px;
+  height: 100vh;
+}
+
+
+nav {
+  grid-area: nav;
+  margin-left: 0.5rem;  
+}
+nav ul {
+  list-style-type: none;
+  
+}
+nav  li {
+  margin-bottom: .5em;
+}
+nav a {
+  text-decoration: none;
+  color: #6f6f59;
+}
+
+main {
+  grid-area: content;
+}
+
+aside {
+  grid-area: side;
+  margin-right: 0.5rem;
+  
+}
+
+footer {
+  display: flex;
+  grid-area: footer;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #87543c;
+  color: white;
+}
+@media (max-width: 768px) {
+  .container {
+    grid-template-areas:
+      "header"
+      "nav"
+      "content"
+      "side"
+      "footer";
+
+    grid-template-columns: 1fr;
+    grid-template-rows:
+      auto /* Header */
+      minmax(75px, auto) /* Nav */
+      1fr /* Content */
+      minmax(75px, auto) /* Sidebar */
+      auto; /* Footer */
+  }
+
+  nav, aside {
+    margin: 0;
+  }
+}
+header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #6f6f59;
+  color: white;
+}
+
+.intro {
+  grid-area: main;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro img {
+  width:100%
+}
+
+.objective-grid {
+ 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.objective-grid-container {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.objective-grid-item {
+  border: 2px solid #6f6f59;
+  width: 30%;
+  color: white;
+  background-color: #6f6f59;
+  align-content: center;
+  margin: .2rem;
+}
+.objective-grid-item  p {
+  text-align: center;
+}
+
+.objective-grid-item  i {
+  align: center;
+}
+
+.reading-grid-container {
+  justify-content: center;
+  align-items: center;
+}
+
+.reading-grid-item {
+  border: 2px solid #6f6f59;
+  width: 30%;
+  color: white;
+  background-color: #6f6f59;
+  align-content: center;
+  margin: .2rem;
+}
+.reading-grid-item  p {
+  text-align: center;
+}
+
+.reading-grid-item  i {
+  align: center;
+}
+
+.discussion-grid {
+  display: flex;
+  justify-content: center;    /* Change this */
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.discussion-grid-container {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.discussion-grid-item {
+  width: 100%;
+  align-content: center;
+}
+
+.intro-grid {
+ justify-content: center;
+  align-items: center;
+}
+
+.intro-grid-container {
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-grid-item {
+  width: 100%;
+  align-content: center;
+}
+.u-photo .avatar {
+  width:250px;
+  height:250px;
+  margin: 10px;
+  border:10px solid red;
+  border-radius: 500px;
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+}
+
+.box {
+  border: 3px solid #6f6f59;
+  width:100%;
+  margin-bottom: .5rem;
+}
+
+.box img {
+  width:40%;
+  margin: 10px;
+  border:2px solid #6f6f59;
+  border-radius: 50%;
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+}
+
+.readings h2 {
+  text-align:center;
+}
+.readings p {
+  padding-left: 2em;
+  text-indent: -2em;
+}
+
+.tasks h2
+{
+  text-align: center;
+}
+.tasks-grid {
+  display: flex;
+  justify-content: center;    /* Change this */
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tasks-grid-container {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tasks-grid-item {
+  border: 2px solid #6f6f59;
+  width: 3100%;
+  color: white;
+  background-color: #6f6f59;
+  align-content: center;
+  margin: .2rem;
+ 
+}
+.assessment-grid-container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 50% 50%;/*Make the grid smaller than the container*/
+  grid-gap: 10px;
+  background-color: #87543c;
+  padding: 10px;
+}
+.assessment-grid-container > div {
+  background-color: #6f6f59;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 2em;
+  color: white;
+}
+
+.assessment-grid-container h4 {
+  font-size: .75em;
+}
+.assessment-grid-container ul {
+  font-size: .5em;
+}
+
+.fa  {
+  displaY:inline-block;
+  text-align: center;
+}
+
+/* Following CSS is for creative common image overlays */
+
+.cc:hover .text1,  .cc:hover .text2,.cc:hover .text3,.cc:hover .text3, .cc:hover .text4,.cc:hover .text5, .cc:hover .text6
+{ opacity:0.9;
+} 
+
+/* This is my css for the div overlay. Badically I made one containter. This container then holds three other divs...the image..the cc image..and the attribution text*/
+div.imageContainer
+/* You set the first container to float. This means it will go all the way to the left or the right. Stuff (call them elements to be proper) before the float will flow around it. Elements after the float are not affected*/{
+  float:left; 
+  position:relative;
+  height: 300;
+  width: 660;
+}
+div.imageContainer img
+{ 
+  width: 75%;
+}
+/* This is the div foor the cc image. Note the position is absolute. We don't want it to move. It is set to be in the bottom, left corner. You may have to twaek these values some*/
+div.overlayImage 
+{
+  position:absolute;
+  bottom:10px;
+  left:0px;    
+  opacity:0;
+  width:100px;
+}
+/* This is the div for the link back to flickr. Again the position is absolute*/ 
+div.attribution
+{
+  position: absolute;
+  width:70%;
+  bottom: 20px;
+  left: 100px;
+  opacity: 0;background-color: #fff;
+  font-size: 1em;
+}
+  
+
+  /* This is what makes the elements hover. Note the opacity  (scale of 0-1.0 is set to 0.7 here but to 0.0 above. We only want to see them when we hiver. So they are normally set to 0.0*/
+} 
+.imageContainer:hover > .overlayImage,
+.imageContainer:hover > .attribution
+{
+  opacity: 0.7;
+}
