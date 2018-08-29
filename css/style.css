@@ -54,10 +54,15 @@ footer {
 @media (max-width: 768px) {
   .container {
     grid-template-areas:
-      "header"
       "nav"
+      "header"
+      "header"
+      "header"
+      
       "content"
       "side"
+      "footer"
+      "footer"
       "footer";
 
     grid-template-columns: 1fr;
@@ -89,8 +94,19 @@ header {
   align-items: center;
 }
 
+.intro-grid-item  p {
+  text-align: center;
+}
+
+.intro-grid-item  i {
+  align: center;
+}
+
 .intro img {
   width:100%
+}
+.intro-grid-item h2 {
+  align: center;
 }
 
 .objective-grid {
